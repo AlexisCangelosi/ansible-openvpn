@@ -1,3 +1,5 @@
+https://travis-ci.com/AlexisCangelosi/openvpn.svg?branch=master
+
 Role Name
 =========
 
