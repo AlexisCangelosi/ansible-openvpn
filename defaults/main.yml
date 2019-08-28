@@ -32,8 +32,8 @@ openvpn_comp_lzo: yes                               # Enable compression
 openvpn_cipher: BF-CBC                              # Encryption algorithm
 openvpn_status: openvpn-status.log
 openvpn_verb: 3
-openvpn_tls_auth : no                            # Enable perfect forward secracyxy
-openvpn_tls_key  : "ta.key"
+openvpn_tls_auth: no                            # Enable perfect forward secracyxy
+openvpn_tls_key: "ta.key"
 openvpn_user: openvpn
 openvpn_group: nobody
 openvpn_resolv_retry: infinite
