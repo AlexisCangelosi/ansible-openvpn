@@ -7,6 +7,7 @@
 
 - name: Configure Easy-RSA | Locate easy-rsa folder
   shell: "whereis easy-rsa | awk '{print $2 }'"
+  changed_when: False
   register: easy_rsa_localisation
 
 - name: Configure Easy-RSA | Test if easy-rsa exist in openssl folder
@@ -16,7 +17,7 @@
 
 - name: Configure Easy-RSA | Move easy-rsa folder on OpenVPN folder
   command: "cp -a {{ item }} /etc/openvpn/"
-  when: easy_rsa_folder.stat.exists == false
+  when: not easy_rsa_folder.stat.exists == True
   ignore_errors: yes
   loop:
     - easy_rsa_location.rc
