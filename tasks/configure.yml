@@ -35,4 +35,3 @@
     src: client.conf.j2
     dest: "{{ openvpn_main_path }}/client/{{ item }}/{{ item }}.ovpn"
   with_items: "{{ openvpn_clients }}"
-

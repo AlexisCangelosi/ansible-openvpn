@@ -6,7 +6,7 @@
     state: present
 
 - name: Configure Easy-RSA | Move easy-rsa folder on OpenVPN folder
-  command: "cp -a /usr/share/easy-rsa/ /etc/openvpn/"  
+  command: "cp -a /usr/share/easy-rsa/ /etc/openvpn/"
 
 - name: Install | Create log directory
   file:
@@ -15,4 +15,3 @@
     recurse: yes
     owner: root
     group: root
-    

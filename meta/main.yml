@@ -2,7 +2,7 @@ galaxy_info:
   author: Alexis Cangelosi
   description: Ansible role openvpn
   company: Alexis Cangelosi
-  license: license (GPLv2, CC-BY, etc)
+  license: BSD
   min_ansible_version: 2.4
   github_branch: master
   platforms:
