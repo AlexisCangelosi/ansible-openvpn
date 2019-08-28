@@ -1,0 +1,10 @@
+---
+# tasks file for alexis.cangelosi.openvpn
+
+- name: Include install tasks file
+  include_tasks: "install.yml"
+  tags: install
+
+- name: Include configure tasks file
+  include_tasks: "configure.yml"
+  tags: configure

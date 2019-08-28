@@ -1,0 +1,12 @@
+---
+# handlers file for alexis.cangelosi.openvpn
+
+- name: openvpn restart
+  service:
+    name: openvpn@server
+    state: restarted
+
+- name: openvpn start
+  service:
+    name: openvpn@server
+    state: started

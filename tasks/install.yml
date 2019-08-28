@@ -1,0 +1,18 @@
+---
+
+- name: Install | Install OpenVPN
+  apt:
+    name: openvpn
+    state: present
+
+- name: Configure Easy-RSA | Move easy-rsa folder on OpenVPN folder
+  command: "cp -a /usr/share/easy-rsa/ /etc/openvpn/"  
+
+- name: Install | Create log directory
+  file:
+    path: /var/log/openvpn
+    state: directory
+    recurse: yes
+    owner: root
+    group: root
+    

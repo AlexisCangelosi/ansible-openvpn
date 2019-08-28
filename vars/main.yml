@@ -1,0 +1,12 @@
+---
+# vars file for alexis.cangelosi.openvpn
+
+openvpn_main_dir: /etc/openvpn/
+openvpn_main_path: /etc/openvpn
+openvpn_easyrsa_dir: /etc/openvpn/easy-rsa/
+openvpn_easyrsa_path: /etc/openvpn/easy-rsa
+openvpn_config_file: server.conf
+openvpn_keydir: "{{ openvpn_main_path }}/server"
+
+openvpn_use_pam_plugin_distribution: /usr/lib/openvpn/openvpn-auth-pam.so
+openvpn_use_ldap_plugin_distribution: /usr/lib/openvpn/openvpn-auth-ldap.so

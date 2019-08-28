@@ -1,0 +1,38 @@
+---
+
+- name: Configure Easy-RSA | Import vars template file
+  template:
+    src: vars.j2
+    dest: "{{ openvpn_easyrsa_dir }}/vars"
+    owner: root
+    group: root
+
+- name: PKI | Symlink openssl conf
+  file:
+    src: "{{ openvpn_easyrsa_path }}/openssl-1.0.0.cnf"
+    dest: "{{ openvpn_easyrsa_path }}/openssl.cnf"
+    owner: root
+    group: root
+    remote_src: yes
+    state: link
+
+- name: Server | Configure
+  template:
+    src: server.conf.j2
+    dest: "{{ openvpn_main_path }}/{{ openvpn_config_file }}"
+
+- name: Clients | Create Client Directories
+  file:
+    path: "{{ openvpn_main_path }}/client/{{ item }}"
+    state: directory
+    recurse: yes
+    owner: root
+    group: root
+  with_items: "{{ openvpn_clients }}"
+
+- name: Clients | Generate Configurations
+  template:
+    src: client.conf.j2
+    dest: "{{ openvpn_main_path }}/client/{{ item }}/{{ item }}.ovpn"
+  with_items: "{{ openvpn_clients }}"
+
