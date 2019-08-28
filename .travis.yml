@@ -2,12 +2,6 @@
 language: python
 python: "2.7"
 
-env:
-  - distribution: debian
-    version: stretch
-  - distribution: debian
-    version: buster
-
 before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -qq python-apt
