@@ -1,4 +1,4 @@
-https://travis-ci.com/AlexisCangelosi/openvpn.svg?branch=master
+[![Build Status](https://travis-ci.com/AlexisCangelosi/openvpn.svg?branch=master)(https://travis-ci.com/AlexisCangelosi/openvpn)
 
 Role Name
 =========
