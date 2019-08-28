@@ -13,6 +13,7 @@
 - name: Configure Easy-RSA | Move easy-rsa folder on OpenVPN folder
   command: "cp -a /usr/share/easy-rsa/ /etc/openvpn/"
   when: easy_rsa_folder.stat.exists == false
+  ignore_errors: yes
 
 - name: Install | Create log directory
   file:
